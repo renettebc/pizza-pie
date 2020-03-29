@@ -1,0 +1,44 @@
+
+package randomproject;
+import java.util.Scanner;
+public class RandomProject {
+
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Please input a target: ");
+        String target = scan.next();
+        System.out.print("Please input payload: ");
+        String payload = scan.next();
+        System.out.print("Please input a replace_with: ");
+        String sample = scan.next();
+        System.out.print("Please input a number: ");
+        int num = scan.nextInt();
+        System.out.print("Please input a character: ");
+        String dos = scan.next();
+ 
+        for(int x = 1; x <= num ; ++x){
+            System.out.print(target + " " + payload + " ");
+            for(int y = 1; y <=num ; ++y){
+                System.out.print(x == y ? sample: y);
+                if(x>0){
+                    if(y<num){
+                        System.out.print(",");
+                    }
+                }
+                
+            }
+            System.out.print(dos);
+            System.out.println();
+            System.out.println();
+            
+        }
+    }
+
+}
+
+         
+
+
+    
+
